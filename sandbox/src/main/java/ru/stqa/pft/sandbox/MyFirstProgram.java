@@ -1,11 +1,8 @@
 package ru.stqa.pft.sandbox;
 
-import javax.sound.midi.Soundbank;
-
 public class MyFirstProgram {
   public static void main(String[] args) {
     System.out.println("Hello world!");
-
     Square s = new Square(5);
     System.out.println("Площадь квадрата со стороной - " + s.l + " = " + s.area());
     Rectangle r = new Rectangle(6, 8);
