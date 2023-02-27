@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sandbox" />
+        <module name="addressbook-web-tests" />
       </profile>
     </annotationProcessing>
   </component>

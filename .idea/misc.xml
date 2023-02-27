@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/sandbox/pom.xml" />
+        <option value="$PROJECT_DIR$/addressbook-web-tests/pom.xml" />
       </list>
     </option>
   </component>
