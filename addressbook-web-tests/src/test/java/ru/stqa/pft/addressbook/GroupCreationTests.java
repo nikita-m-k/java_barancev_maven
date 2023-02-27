@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
@@ -19,11 +20,12 @@ public class GroupCreationTests {
   @Test
   public void testGroupCreation() throws Exception{
     wd.get("http://localhost/addressbook/");
+    Thread.sleep(1000);
     wd.findElement(By.name("user")).clear();
     wd.findElement(By.name("user")).sendKeys("admin");
     wd.findElement(By.name("pass")).clear();
     wd.findElement(By.name("pass")).sendKeys("secret");
-    wd.findElement(By.xpath("//input[@value='Login'")).click();
+    wd.findElement(By.cssSelector("input[type='submit']")).click();
     wd.findElement(By.linkText("groups")).click();
     wd.findElement(By.name("new")).click();
     wd.findElement(By.name("group_name")).clear();
