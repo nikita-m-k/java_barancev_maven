@@ -34,7 +34,7 @@ public class GroupDeletionTest {
     goToGroupPage();
     selectGroup();
     initGroupDeletion();
-    goToGroupPage();
+    returnToGroupPage();
   }
 
   private void goToGroupPage() {
@@ -47,6 +47,10 @@ public class GroupDeletionTest {
 
   private void initGroupDeletion() {
     wd.findElement(By.cssSelector("input[name='delete']")).click();
+  }
+
+  private void returnToGroupPage() {
+    wd.findElement(By.linkText("group page")).click();
   }
 
   @AfterMethod(alwaysRun = true)
