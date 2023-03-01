@@ -66,7 +66,7 @@ public class TestBase {
     wd.findElement(By.cssSelector("input[name='selected[]']")).click();
   }
 
-  protected void initGroupDeletion() {
+  protected void deleteSelectedGroups() {
     wd.findElement(By.cssSelector("input[name='delete']")).click();
   }
 }

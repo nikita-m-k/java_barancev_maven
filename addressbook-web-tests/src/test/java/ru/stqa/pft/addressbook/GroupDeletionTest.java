@@ -8,7 +8,7 @@ public class GroupDeletionTest extends TestBase {
   public void testGroupDeletion() {
     goToGroupPage();
     selectGroup();
-    initGroupDeletion();
+    deleteSelectedGroups();
     returnToGroupPage();
   }
 
