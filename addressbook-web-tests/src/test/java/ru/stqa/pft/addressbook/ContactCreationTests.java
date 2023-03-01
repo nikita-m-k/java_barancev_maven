@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class ContactCreationTests {
+public class ContactCreationTests extends TestBase {
   private WebDriver wd;
 
   @BeforeMethod(alwaysRun = true)
