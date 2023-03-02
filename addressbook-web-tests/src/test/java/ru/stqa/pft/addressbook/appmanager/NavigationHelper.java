@@ -7,7 +7,7 @@ public class NavigationHelper {
   private WebDriver wd;
 
   public NavigationHelper(WebDriver wd) {
-    this.wd=wd;
+    this.wd = wd;
   }
 
   public void goToGroupPage() {

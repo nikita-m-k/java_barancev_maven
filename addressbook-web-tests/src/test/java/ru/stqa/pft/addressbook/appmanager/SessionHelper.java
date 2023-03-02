@@ -10,6 +10,7 @@ public class SessionHelper {
 
     this.wd = wd;
   }
+
   public void logIn(String username, String password) {
     wd.findElement(By.name("user")).clear();
     wd.findElement(By.name("user")).sendKeys(username);
