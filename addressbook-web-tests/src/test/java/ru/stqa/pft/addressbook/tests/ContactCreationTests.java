@@ -35,7 +35,6 @@ public class ContactCreationTests extends TestBase {
     initContactCreation();
     fillContactForm(new ContactData("Ivan", "Ivanovich", "Ivanov", "Pusworm"));
     submitContactCreation();
-    //wd.findElement(By.cssSelector("img[title='Addressbook']")).click();
   }
 
   private void submitContactCreation() {
