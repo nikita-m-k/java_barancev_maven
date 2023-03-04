@@ -34,4 +34,16 @@ public class ContactHelper extends HelperBase {
     wd.switchTo().alert().accept();
 
   }
+
+  public void initContactModification() {
+    click(By.cssSelector("img[title='Edit']"));
+  }
+
+  public void submitContactModification() {
+    click(By.name("update"));
+  }
+
+  public void returnToContactPage() {
+    click(By.cssSelector("img[title='Addressbook']"));
+  }
 }
