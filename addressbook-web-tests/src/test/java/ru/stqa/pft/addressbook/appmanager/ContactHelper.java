@@ -1,45 +1,36 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
-
-public class ContactHelper {
-  private WebDriver wd;
+public class ContactHelper extends HelperBase {
 
   public ContactHelper(WebDriver wd) {
-    this.wd = wd;
+    super(wd);
   }
 
   public void submitContactCreation() {
-    wd.findElement(By.cssSelector("input[name='submit']")).click();
+    click(By.cssSelector("input[name='submit']"));
   }
 
   public void fillContactForm(ContactData contactData) {
-    wd.findElement(By.cssSelector("input[name='firstname']")).clear();
-    wd.findElement(By.cssSelector("input[name='firstname']")).sendKeys(contactData.getName());
-    wd.findElement(By.cssSelector("input[name='middlename']")).clear();
-    wd.findElement(By.cssSelector("input[name='middlename']")).sendKeys(contactData.getMiddlename());
-    wd.findElement(By.cssSelector("input[name='lastname']")).clear();
-    wd.findElement(By.cssSelector("input[name='lastname']")).sendKeys(contactData.getLastname());
-    wd.findElement(By.cssSelector("input[name='nickname']")).clear();
-    wd.findElement(By.cssSelector("input[name='nickname']")).sendKeys(contactData.getNickname());
+    type(By.cssSelector("input[name='firstname']"), contactData.getName());
+    type(By.cssSelector("input[name='middlename']"), contactData.getMiddlename());
+    type(By.cssSelector("input[name='lastname']"), contactData.getLastname());
+    type(By.cssSelector("input[name='nickname']"), contactData.getNickname());
   }
 
   public void initContactCreation() {
-    wd.findElement(By.cssSelector("a[href='edit.php']")).click();
+    click(By.cssSelector("a[href='edit.php']"));
   }
 
   public void selectContact() {
-    wd.findElement(By.cssSelector("input[name='selected[]']")).click();
+    click(By.cssSelector("input[name='selected[]']"));
   }
 
   public void deleteContact() {
-    wd.findElement(By.cssSelector("input[value='Delete']")).click();
+    click(By.cssSelector("input[value='Delete']"));
     wd.switchTo().alert().accept();
 
   }
