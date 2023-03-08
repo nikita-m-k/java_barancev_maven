@@ -13,7 +13,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void submitContactCreation() {
-    click(By.cssSelector("input[name='submit']"));
+    click(By.name("submit"));
   }
 
   public void fillContactForm(ContactData contactData, boolean creation) {
@@ -53,5 +53,16 @@ public class ContactHelper extends HelperBase {
 
   public void returnToContactPage() {
     click(By.cssSelector("img[title='Addressbook']"));
+  }
+
+  public boolean isThereAContact() {
+    return isElementPresent(By.name("selected[]"));
+  }
+
+  public void createContact(ContactData contactData, boolean b) {
+    initContactCreation();
+    fillContactForm(contactData, b);
+    submitContactCreation();
+    returnToContactPage();
   }
 }
