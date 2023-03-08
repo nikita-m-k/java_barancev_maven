@@ -29,7 +29,7 @@ public class ApplicationManager {
     } else if (browser == Browser.EDGE){
       wd = new EdgeDriver();
     }
-    wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/");
     Thread.sleep(1000);
     contactHelper = new ContactHelper(wd);
