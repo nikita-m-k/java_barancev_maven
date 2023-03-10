@@ -65,4 +65,8 @@ public class ContactHelper extends HelperBase {
     submitContactCreation();
     returnToContactPage();
   }
+
+  public int getContactCount() {
+    return wd.findElements(By.cssSelector("td [name='selected[]']")).size();
+  }
 }

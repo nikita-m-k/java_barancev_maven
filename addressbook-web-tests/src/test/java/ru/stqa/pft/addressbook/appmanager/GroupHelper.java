@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.stqa.pft.addressbook.model.GroupData;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GroupHelper extends HelperBase {
 
   public GroupHelper(WebDriver wd) {
@@ -53,5 +56,9 @@ public class GroupHelper extends HelperBase {
     fillGroupForm(groupData);
     submitGroupCreation();
     returnToGroupPage();
+  }
+
+  public int getGroupCount() {
+    return wd.findElements(By.name("selected[]")).size();
   }
 }
