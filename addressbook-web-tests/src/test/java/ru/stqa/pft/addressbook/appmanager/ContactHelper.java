@@ -33,8 +33,8 @@ public class ContactHelper extends HelperBase {
     click(By.cssSelector("a[href='edit.php']"));
   }
 
-  public void selectContact() {
-    click(By.cssSelector("input[name='selected[]']"));
+  public void selectContact(int index) {
+    wd.findElements(By.cssSelector("td [name='selected[]']")).get(index).click();
   }
 
   public void deleteContact() {
