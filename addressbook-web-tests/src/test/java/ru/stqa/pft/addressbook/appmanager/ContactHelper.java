@@ -69,6 +69,13 @@ public class ContactHelper extends HelperBase {
     submitContactCreation();
     returnToContactPage();
   }
+  public void modifyContact(int index, ContactData contact) {
+    selectContact(index);
+    initContactModification();
+    fillContactForm(contact, false);
+    submitContactModification();
+    returnToContactPage();
+  }
 
   public int getContactCount() {
     return wd.findElements(By.cssSelector("td [name='selected[]']")).size();
